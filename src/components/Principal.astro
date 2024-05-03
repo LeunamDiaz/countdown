@@ -1,0 +1,148 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<main class="relative">
+  <div class="relative inline-block">
+    <!-- Imagen para pantallas pequeñas (sm) -->
+    <img
+      src="sofi1cel.webp"
+      class="md:hidden w-full"
+      alt="Quinceañera versión celular"
+    />
+    <!-- Imagen para pantallas medianas (md) y más grandes -->
+    <img
+      src="sofi1web.webp"
+      class="hidden md:block w-full max-w-screen"
+      alt="Quinceañera versión web"
+    />
+
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+  </div>
+  <div
+    class="absolute inset-x-0 bottom-10 flex flex-col items-center justify-center z-20"
+    style="font-family: 'MarisaBold';"
+  >
+    <div class="flex justify-center mt-56" style="font-family: 'semicursive';">
+    </div>
+    <div>
+      <h2
+        class="text-white text-[70px] md:text-[100px] lg:text-[120px] text-center"
+        style="font-family: 'cursive';"
+      >
+        Ana Sofia
+      </h2>
+
+      <h1
+        class="text-white text-[24px] md:text-[34px] lg:text-[44px] mt-10 ml-5 text-center md:ml-0"
+        style="font-family: 'straight';"
+      >
+        28 - DICIEMBRE - 2024
+      </h1>
+      <div class="w-full flex justify-center mb-10">
+        <ul
+          style="font-family: 'straight';"
+          class="flex bold text-amber-100 gap-5 mx-auto text-gray-50"
+        >
+          <li>
+            <div
+              class="font-bold text-white flex items-center justify-center text-2xl md:text-3xl lg:text-4xl h-16 md:h-20 lg:h-24 w-16 md:w-20 lg:w-24"
+              id="cdD"
+            >
+              00
+            </div>
+            <p class="text-center text-md md:text-lg lg:text-xl">Days</p>
+          </li>
+
+          <li>
+            <div
+              class="font-bold text-white flex items-center justify-center text-2xl md:text-3xl lg:text-4xl h-16 md:h-20 lg:h-24 w-16 md:w-20 lg:w-24"
+              id="cdH"
+            >
+              00
+            </div>
+            <p class="text-center text-md md:text-lg lg:text-xl">Hours</p>
+          </li>
+
+          <li>
+            <div
+              class="font-bold text-white flex items-center justify-center text-2xl md:text-3xl lg:text-4xl h-16 md:h-20 lg:h-24 w-16 md:w-20 lg:w-24"
+              id="cdM"
+            >
+              00
+            </div>
+            <p class="text-center text-md md:text-lg lg:text-xl">Minutes</p>
+          </li>
+
+          <li>
+            <div
+              class="font-bold text-white flex items-center justify-center text-2xl md:text-3xl lg:text-4xl h-16 md:h-20 lg:h-24 w-16 md:w-20 lg:w-24"
+              id="cdS"
+            >
+              00
+            </div>
+            <p class="text-center text-md md:text-lg lg:text-xl">Seconds</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Change the value of countDownEndDate to the day you want to end the count down
+    var countDownEndDate = "December 28, 2024 09:00:00";
+
+    var endDate = new Date(countDownEndDate).getTime();
+
+    var x = setInterval(function () {
+      var timeNow = new Date().getTime();
+
+      var timeLeft = endDate - timeNow;
+
+      var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      var displayDays = days < 10 ? "0" + days : "" + days;
+      var displayHours = hours < 10 ? "0" + hours : "" + hours;
+      var displayMinutes = minutes < 10 ? "0" + minutes : "" + minutes;
+      var displaySeconds = seconds < 10 ? "0" + seconds : "" + seconds;
+
+      if (timeLeft > 0) {
+        document.getElementById("cdD").innerHTML = displayDays;
+        document.getElementById("cdH").innerHTML = displayHours;
+        document.getElementById("cdM").innerHTML = displayMinutes;
+        document.getElementById("cdS").innerHTML = displaySeconds;
+      }
+    }, 1000);
+  </script>
+</main>
+
+<section style="font-family: 'straight';">
+  <p
+    class="text-white md:mb-20 text-md md:text-[24px] lg:text-[35px] text-center py-20 px-6 leading-relaxed lg:leading-loose"
+  >
+    Hoy quiero compartir mi alegría con todas las personas a las que amo y me
+    aman, por eso tú tienes que ser parte de esta fiesta.
+  </p>
+</section>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<body
+  class="w-screen h-screen bg-[#efeeee] grid place-items-center m-0 p-0 box-border"
+>
+  <div
+    class="container relative cursor-pointer p-16 bg-[#efeeee] rounded-full transition-all duration-300 ease-in shadow-[10px_10px_10px_rgba(0,0,0,0.1),_-10px_-10px_10px_rgba(255,255,255,0.6)] active:shadow-[inset_10px_10px_10px_rgba(0,0,0,0.1),_inset_-10px_-10px_10px_rgba(255,255,255,0.6)]"
+  >
+    <i
+      class="fas fa-play grid place-items-center text-4xl text-gray-500 active:text-[#721efa]"
+    ></i>
+  </div>
+</body>
